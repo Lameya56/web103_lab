@@ -11,7 +11,8 @@ const router = express.Router();
 //     res.status(200).json(giftData)
 // })
 router.get('/', GiftsController.getGifts);
-router.get('/:giftId', (req, res) => {
-    res.status(200).sendFile(path.resolve(_dirname, '../public/gift.html'))
-})
+// router.get('/:giftId', (req, res) => {
+//     res.status(200).sendFile(path.resolve(_dirname, '../public/gift.html'))
+// })
+router.get('/:giftId', GiftsController.getGiftById)
 export default router;
